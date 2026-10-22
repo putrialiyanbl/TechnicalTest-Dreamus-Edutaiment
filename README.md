@@ -17,3 +17,19 @@ Alasan membuat desain seperti ini sudah dijelaskan pada ERD dan Master item menj
 
 - Trade-off
 untuk trade - off bagian size dan color cukup berada di bagian table karena setiap item memiliki tipe, jenis dan warna yang acak dan tidak terlalu sama. ketika kita terlalu fokus untuk mengelompokkan sesuatu, maka akan memakan waktu malah tidak rapi.
+
+Task 3 - REST API Development
+Untuk API Development, saya belum memiliki pengalaman begitu banyak terkait pembuatan API dan dikarenakan kekurangan tools yang dimiliki dari perangkat saya membuat proses technical test ini menjadi kurang lancar dan saya sangat menghindari penggunaan AI ketika saya masih perlu belajar banyak terkait hal yang ingin saya tulis.
+Tetapi sejauh yang saya paham terkait API.
+Pembuatan API ini memerlukan tools menggunakan bahasa pemrograman dan saya sudah mencoba menggunakan python tetapi hal tersebut belum bisa menemukan cara terbaik dengan cepat.
+
+Task 4 - Inventory Transaction
+Untuk API Development, saya belum memiliki pengalaman begitu banyak terkait pembuatan API dan dikarenakan kekurangan tools yang dimiliki dari perangkat saya membuat proses technical test ini menjadi kurang lancar dan saya sangat menghindari penggunaan AI ketika saya masih perlu belajar banyak terkait hal yang ingin saya tulis.
+Tetapi sejauh yang saya paham terkait API.
+Pembuatan API ini memerlukan tools menggunakan bahasa pemrograman dan saya sudah mencoba menggunakan python tetapi hal tersebut belum bisa menemukan cara terbaik dengan cepat.
+
+Task 5 - Integration API
+Dikarenakan belum berhasil membuat API maka pada integrasi ini belum bisa dilakukan. Biasanya untuk API, saya dibantu oleh tim Developer untuk dibuatkan API yang sesuai. Saya akan coba pelajari lagi lebih lanjut terkait proses API ini.
+
+Task 6 - Query
+Dikarenakan tidak memiliki aplikasi MySQL atau sejenisnya, saya hanya membuat query sesuai dengan pengalaman saya dalam membuat query dan disesuaikan dengan soal yang ada
