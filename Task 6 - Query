@@ -1,0 +1,40 @@
+Table Sales_Transaction
+ID, Store_Code, Transaction_Date, Item_Code, qty, amount
+
+--1.Top 10 Item Terlaris Bulan Berjalan.
+-- untuk mencari nilai item yang paling laku adalah melihat dari jumlah barang yang terjual dan hasil penjualam dalam bulan berjalan
+SELECT item_code,
+SUM(qty) AS totalqty
+FROM sales_transaction
+WHERE transaction_date >= DATE_FORMAT(CURDATE(),'2026-10-01')
+AND transaction_date < DATE_FORMAT(CURDATE() + INTERVAL 1 MONTH, '2026-11-01')
+GROUP BY item_code
+ORDER BY total_qty_sold DESC
+LIMIT 10;
+
+--2. Top 5 Store Omzet tertinggi
+--untuk mencari nilai store omzet tertinggi, berarti perlu melihat store dan transaction dan cari paling tinggi dengan descending
+SELECT store_code, 
+SUM(amount) AS totalrevenue
+FROM sales_transaction
+GROUP BY store_code
+ORDER BY totalrevenue DESC
+LIMIT 5;
+
+--3.Total Penjualan per Brand (brand diambil dari tabel master item pada Task 2).
+--untuk mencari total penjualan per brand, berarti perlu melihat data dari brand yang ada di master data dan dijumlahkan dengan omzet dan berarti dijoinkan dengan item_code
+SELECT mi.brand, SUM(st.amount) AS totalsales
+FROM sales_transaction st
+JOIN master_item mi
+ON st.item_code = mi.item_code
+GROUP BY mi.brand
+ORDER BY totalsales DESC
+
+--4.Tambahan: daftar item aktif yang tidak terjual sama sekali dalam 30 hari terakhir.
+--untuk melihat item yang tidak terjual sama sekali pada 30 hari terakhir, berarti yang diambil adalah nama item dan dilihat dengan transaksi tiap item
+SELECT mi.item_code, mi.item_code, mi.brand
+FROM master_item mi
+WHERE mi.active = TRUE
+AND DO NOT EXISTS 
+(SELECT 1 FROM sales_transaction st WHERE st.item_code = mi.item_code AND st.transaction_date >= NOW() - INTERVAL 30 DAY))
+ORDER BY mi.item_name
